@@ -1,18 +1,12 @@
-import './App.css';
-import { API } from './shared/api/index';
-
-import React from 'react';
+import Table from './components/molecules/Table';
+import SearchTable from './components/organisms/SearchTable';
 
 function App() {
-  React.useEffect(() => {
-    API.getRockets()
-      .then((data: any) => {
-        console.log(data);
-      })
-      .catch((error: any) => {
-        console.log(error);
-      });
-  }, []);
+  return (
+    <>
+      <SearchTable />
+    </>
+  );
 }
 
 export default App;

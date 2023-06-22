@@ -1,6 +1,11 @@
 import React from 'react';
 import { IRocket } from '../../../shared/api/types';
 import {
+  StyledDiameter,
+  StyledHeight,
+  StyledLeft,
+  StyledMass,
+  StyledRight,
   StyledTableEl,
   StyledTableNames,
   StyledTableTitles,
@@ -26,11 +31,11 @@ const Table = ({ rockets }: TableProps) => {
       <StyledTableUl>
         {rockets.map((rocket) => (
           <StyledTableEl key={rocket.id}>
-            <p>{rocket.rocket_name}</p>
-            <p>{rocket.diameter.meters} m</p>
-            <p>{rocket.height.meters} m</p>
-            <p>{rocket.mass.kg} kg</p>
-            <p>${rocket.cost_per_launch}</p>
+            <StyledLeft>{rocket.rocket_name}</StyledLeft>
+            <StyledDiameter>{rocket.diameter.meters} m</StyledDiameter>
+            <StyledHeight>{rocket.height.meters} m</StyledHeight>
+            <StyledMass>{rocket.mass.kg} kg</StyledMass>
+            <StyledRight>${rocket.cost_per_launch}</StyledRight>
           </StyledTableEl>
         ))}
       </StyledTableUl>

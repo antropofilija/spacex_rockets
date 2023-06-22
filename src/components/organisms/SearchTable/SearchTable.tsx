@@ -3,6 +3,7 @@ import { API } from '../../../shared/api';
 import { IRocket } from '../../../shared/api/types';
 import Search from '../../molecules/SearchFilter/SearchFilter';
 import Table from '../../molecules/Table';
+import { StyledDivWrapper } from './style';
 
 const SearchTable = () => {
   const [rockets, setRockets] = useState<IRocket[]>([]);
@@ -43,10 +44,10 @@ const SearchTable = () => {
   };
 
   return (
-    <>
-      <Search onSearch={handleSearch} />
+    <StyledDivWrapper>
+      <Search onSearch={handleSearch} resultsCount={filteredRockets.length} />{' '}
       <Table rockets={filteredRockets} />
-    </>
+    </StyledDivWrapper>
   );
 };
 

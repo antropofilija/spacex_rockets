@@ -4,7 +4,7 @@ export const StyledSearchFilterWrapper = styled.div`
   display: flex;
   align-items: center;
   background-color: #fff;
-  width: 1110px;
+  width: 1097px;
   height: 54px;
   border-radius: 8px;
 

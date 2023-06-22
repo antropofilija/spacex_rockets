@@ -1,13 +1,14 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import Input from '../../atoms/Input';
 import ICONS from '../../../assets/icons';
 import { StyledH3, StyledP, StyledSearchFilterWrapper } from './style';
 
 interface ISearchProps {
   onSearch: (query: string) => void;
+  resultsCount: number; // Add a prop for the results count
 }
 
-const Search = ({ onSearch }: ISearchProps) => {
+const Search = ({ onSearch, resultsCount }: ISearchProps) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +20,8 @@ const Search = ({ onSearch }: ISearchProps) => {
   return (
     <StyledSearchFilterWrapper>
       <StyledH3>SpaceX rockets</StyledH3>
-      <StyledP>3 Results</StyledP>
+      <StyledP>{resultsCount} Results</StyledP>{' '}
+      {/* Display the results count */}
       <Input
         type='text'
         icon={ICONS.search}

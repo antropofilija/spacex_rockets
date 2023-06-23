@@ -80,5 +80,4 @@ export const StyledMass = styled.p`
 
 export const StyledRight = styled.p`
   text-align: right;
-  /* padding-left: 200px; */
 `;

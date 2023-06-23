@@ -5,7 +5,7 @@ import { StyledH3, StyledP, StyledSearchFilterWrapper } from './style';
 
 interface ISearchProps {
   onSearch: (query: string) => void;
-  resultsCount: number; // Add a prop for the results count
+  resultsCount: number;
 }
 
 const Search = ({ onSearch, resultsCount }: ISearchProps) => {
@@ -21,7 +21,6 @@ const Search = ({ onSearch, resultsCount }: ISearchProps) => {
     <StyledSearchFilterWrapper>
       <StyledH3>SpaceX rockets</StyledH3>
       <StyledP>{resultsCount} Results</StyledP>{' '}
-      {/* Display the results count */}
       <Input
         type='text'
         icon={ICONS.search}

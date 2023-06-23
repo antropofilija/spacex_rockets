@@ -9,7 +9,7 @@ export const StyledInputWrapper = styled.div`
 
 export const StyledIcon = styled.span`
   color: #5a71e4;
-  margin-top: 5px;
+  margin-top: 7px;
 `;
 
 export const StyledAll = styled.div`
